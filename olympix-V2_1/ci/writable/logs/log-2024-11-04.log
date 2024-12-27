@@ -1,0 +1,850 @@
+ERROR - 2024-11-04 13:12:50 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'e22240198sql'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-04 13:12:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-04 13:13:47 --> Error connecting to the database: ErrorException: Trying to access array offset on value of type null in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:92
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(92): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-11-04 13:13:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Trying to access array offset on value of type null
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-04 13:13:50 --> Error connecting to the database: ErrorException: Trying to access array offset on value of type null in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:92
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(92): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-11-04 13:13:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Trying to access array offset on value of type null
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-04 13:13:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'e22240198sql'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-04 13:13:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-04 13:14:20 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for e22240198sql failed: Name or service not known in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for e22240198sql failed: Name or service not known in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for **** failed: Name or service not known in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-04 13:14:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for **** failed: Name or service not known
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-04 13:14:24 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'e22240198sql'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-04 13:14:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-04 13:14:28 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for e22240198sql failed: Name or service not known in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for e22240198sql failed: Name or service not known in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for **** failed: Name or service not known in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-04 13:14:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for **** failed: Name or service not known
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-04 13:14:33 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'e22240198sql'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-04 13:14:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-04 13:17:14 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'e22240198sql'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-04 13:17:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-04 13:18:05 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'e22240198sql'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-04 13:18:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-04 13:18:11 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'e22240198sql'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-04 13:18:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-04 13:19:19 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'e22240198sql'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-04 13:19:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-04 13:19:30 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'e22240198sql'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-04 13:19:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-04 13:20:51 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'e22240198sql'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-04 13:20:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-04 13:20:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'e22240198sql'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->lister()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-11-04 13:20:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Db_model.php(16): CodeIgniter\Database\BaseConnection->query()
+ 3 APPPATH/Controllers/Compte.php(15): App\Models\Db_model->get_all_compte()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:37:40 --> Error: Object of class stdClass could not be converted to string
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:37:40 --> Error: Object of class stdClass could not be converted to string
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:38:16 --> Error: Cannot use object of type stdClass as array
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:38:52 --> Error: Cannot use object of type stdClass as array
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:40:22 --> ErrorException: Undefined variable $requete
+in APPPATH/Models/Db_model.php on line 29.
+ 1 APPPATH/Models/Db_model.php(29): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Compte.php(16): App\Models\Db_model->get_nb_comptes()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:40:37 --> TypeError: CodeIgniter\Database\BaseConnection::query(): Argument #1 ($sql) must be of type string, CodeIgniter\Database\MySQLi\Result given, called in /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php on line 29
+in SYSTEMPATH/Database/BaseConnection.php on line 570.
+ 1 APPPATH/Models/Db_model.php(29): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Compte.php(16): App\Models\Db_model->get_nb_comptes()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:40:39 --> TypeError: CodeIgniter\Database\BaseConnection::query(): Argument #1 ($sql) must be of type string, CodeIgniter\Database\MySQLi\Result given, called in /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php on line 29
+in SYSTEMPATH/Database/BaseConnection.php on line 570.
+ 1 APPPATH/Models/Db_model.php(29): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Compte.php(16): App\Models\Db_model->get_nb_comptes()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:41:25 --> Error: Cannot use object of type stdClass as array
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:42:45 --> Error: Cannot use object of type stdClass as array
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:43:16 --> Error: Cannot use object of type stdClass as array
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:43:21 --> Error: Cannot use object of type stdClass as array
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:43:33 --> Error: Cannot use object of type stdClass as array
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:43:34 --> Error: Cannot use object of type stdClass as array
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:44:05 --> Error: Object of class stdClass could not be converted to string
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:44:07 --> Error: Object of class stdClass could not be converted to string
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:44:28 --> Error: Cannot use object of type stdClass as array
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:46:48 --> Error: Cannot use object of type stdClass as array
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:48:37 --> Error: Cannot use object of type stdClass as array
+in APPPATH/Views/affichage_comptes.php on line 7.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Compte.php(18): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:49:41 --> ErrorException: Attempt to read property "cpt_pseudo" on array
+in APPPATH/Views/affichage_comptes.php on line 15.
+ 1 APPPATH/Views/affichage_comptes.php(15): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2024DIFAL3/e22204198/public_html/V1/ci/app/Views/affichage_comptes.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Compte.php(18): view()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 13:49:42 --> ErrorException: Attempt to read property "cpt_pseudo" on array
+in APPPATH/Views/affichage_comptes.php on line 15.
+ 1 APPPATH/Views/affichage_comptes.php(15): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2024DIFAL3/e22204198/public_html/V1/ci/app/Views/affichage_comptes.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Compte.php(18): view()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 14:01:00 --> ParseError: syntax error, unexpected token "public", expecting end of file
+in APPPATH/Controllers/Accueil.php on line 14.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(899): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 14:05:12 --> ErrorException: Undefined variable $titre
+in APPPATH/Views/affichage_accueil.php on line 39.
+ 1 APPPATH/Views/affichage_accueil.php(39): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2024DIFAL3/e22204198/public_html/V1/ci/app/Views/affichage_accueil.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Accueil.php(10): view()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Accueil->afficher()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 14:06:26 --> ErrorException: Undefined variable $titre
+in APPPATH/Views/affichage_accueil.php on line 39.
+ 1 APPPATH/Views/affichage_accueil.php(39): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2024DIFAL3/e22204198/public_html/V1/ci/app/Views/affichage_accueil.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Accueil.php(10): view()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Accueil->afficher()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 14:20:13 --> ParseError: Unmatched '}'
+in APPPATH/Views/affichage_accueil.php on line 70.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Accueil.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Accueil->afficher()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 14:20:14 --> ParseError: Unmatched '}'
+in APPPATH/Views/affichage_accueil.php on line 70.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Accueil.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Accueil->afficher()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 19:25:53 --> Error: Undefined constant "App\Models\this"
+in APPPATH/Models/Db_model.php on line 40.
+ 1 APPPATH/Controllers/Accueil.php(12): App\Models\Db_model->get_all_concours()
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Accueil->afficher()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 19:26:17 --> Error: Undefined constant "App\Models\this"
+in APPPATH/Models/Db_model.php on line 40.
+ 1 APPPATH/Controllers/Accueil.php(12): App\Models\Db_model->get_all_concours()
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Accueil->afficher()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 19:26:41 --> Error: Undefined constant "App\Models\this"
+in APPPATH/Models/Db_model.php on line 40.
+ 1 APPPATH/Controllers/Accueil.php(12): App\Models\Db_model->get_all_concours()
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Accueil->afficher()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 19:35:07 --> ParseError: syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH/Views/affichage_accueil.php on line 112.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Accueil.php(14): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Accueil->afficher()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 19:35:15 --> ParseError: syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH/Views/affichage_accueil.php on line 112.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Accueil.php(14): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Accueil->afficher()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 19:37:15 --> ErrorException: Undefined array key "crs_description"
+in APPPATH/Views/affichage_accueil.php on line 104.
+ 1 APPPATH/Views/affichage_accueil.php(104): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2024DIFAL3/e22204198/public_html/V1/ci/app/Views/affichage_accueil.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Accueil.php(14): view()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Accueil->afficher()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 19:38:39 --> ErrorException: Undefined array key "crs_description"
+in APPPATH/Views/affichage_accueil.php on line 104.
+ 1 APPPATH/Views/affichage_accueil.php(104): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2024DIFAL3/e22204198/public_html/V1/ci/app/Views/affichage_accueil.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Accueil.php(14): view()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Accueil->afficher()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 21:00:50 --> ParseError: syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH/Views/affichage_accueil.php on line 99.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Accueil.php(14): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Accueil->afficher()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 21:24:48 --> ErrorException: Undefined variable $concour
+in APPPATH/Views/affichage_accueil.php on line 101.
+ 1 APPPATH/Views/affichage_accueil.php(101): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2024DIFAL3/e22204198/public_html/V1/ci/app/Views/affichage_accueil.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Accueil.php(14): view()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Accueil->afficher()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-04 21:37:06 --> Error: Call to a member function format() on string
+in APPPATH/Views/affichage_accueil.php on line 107.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Accueil.php(14): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Accueil->afficher()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

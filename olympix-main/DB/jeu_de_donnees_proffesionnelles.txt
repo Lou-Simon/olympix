@@ -1,0 +1,147 @@
+SET @sell:='ceciestmonsell1234';
+
+INSERT INTO `t_compte_cpt` (`cpt_pseudo`, `cpt_mdp`) VALUES
+('jean.martin@yahoo.com', SHA2(CONCAT('martin',@sell),256)),
+('lou.simon.2287@gmail.com', SHA2(CONCAT('simon',@sell),256)),
+('luc.brunet@free.fr', SHA2(CONCAT('brunet',@sell),256)),
+('marie.gautier@orange.fr', SHA2(CONCAT('gautier',@sell),256)),
+('nicolas.robin@live.com', SHA2(CONCAT('robin',@sell),256)),
+('organisateur@concoursphotomaritime.com', SHA2(CONCAT('org24*PMYLO',@sell),256)),
+('sophie.dubois@hotmail.com', SHA2(CONCAT('dubois',@sell),256)),
+('valerie.marc@univ-brest.fr', SHA2(CONCAT('marc',@sell),256)),
+('catherine.leroux@gmail.com', SHA2(CONCAT('leroux', @sell), 256)),
+('pierre.durand@yahoo.com', SHA2(CONCAT('durand', @sell), 256));
+
+INSERT INTO `t_gerant_grt` (`cpt_pseudo`, `grt_etat`) VALUES
+('lou.simon.2287@gmail.com', 'A'),
+('organisateur@concoursphotomaritime.com', 'A'),
+('valerie.marc@univ-brest.fr', 'A');
+
+
+INSERT INTO `t_jury_jry` (`cpt_pseudo`, `jry_nom`, `jry_prenom`, `jry_biographie`, `jry_discipline`, `jry_url`, `jry_etat`, `jry_image`) VALUES
+('jean.martin@yahoo.com', 'Martin', 'Jean', 'Photographe passionné par la mer et les paysages côtiers.', 'Photographies côtières', 'https://www.yohannkersale.com', 'A', 'photo_jry_martin.jpg'),
+('luc.brunet@free.fr', 'Brunet', 'Luc', 'Expert en photographie de faune marine.', 'Photographies de faune', 'https://www.laurentballesta.com', 'A', 'photo_jry_brunet.jpg'),
+('marie.gautier@orange.fr', 'Gautier', 'Marie', 'Spécialiste des portraits en milieu marin.', 'Photographies de portraits', 'https://www.leonardfauquet.com', 'A', 'photo_jry_gautier.jpg'),
+('nicolas.robin@live.com', 'Robin', 'Nicolas', 'Photographe d’architecture maritime, avec un focus sur les ports.', 'Photographies d’architecture', 'https://www.jeanlucmoreau.fr', 'A', 'photo_jry_robin.jpg'),
+('sophie.dubois@hotmail.com', 'Dubois', 'Sophie', 'Jury de plusieurs concours de photographie maritime, avec une passion pour les reflets.', 'Photographies artistiques', 'https://www.jeanpaulgarnier.com', 'A', 'photo_jry_dubois.jpg'),
+('catherine.leroux@gmail.com', 'Leroux', 'Catherine', 'Photographe spécialisée dans les paysages aquatiques et les reflets naturels.', 'Photographies aquatiques', 'https://www.aquaticvisions.com', 'A', 'photo_jry_leroux.jpg'),
+('pierre.durand@yahoo.com', 'Durand', 'Pierre', 'Expert en reflets urbains et effets d\'eau en photographie.', 'Reflets urbains', 'https://www.urbanreflections.com', 'A', 'photo_jry_durand.jpg');
+
+
+INSERT INTO `t_categorie_cat` (`cat_id`, `cat_nom`, `cat_description`) VALUES
+(1, 'Paysages Maritimes', 'Catégorie dédiée aux clichés capturés durant les heures du crépuscule.'),
+(2, 'Silhouettes et Ombres', 'Catégorie pour les paysages marins capturés à différents moments de la journée.'),
+(3, 'Couleurs en Reflet', 'Catégorie mettant l’accent sur les reflets d’eau et leurs effets visuels.'),
+(4, 'Crépuscule Glacial', 'Catégorie dédiée aux prises de vue en hiver, avec des paysages enneigés et glacés.'),
+(5, 'Lumières Hivernales', 'Catégorie pour les œuvres d’art et les interprétations créatives liées à la mer.'),
+(6, 'Miroirs d’Eau Naturels', 'Photographies mettant en scène des reflets naturels sur la mer ou les lacs.'),
+(7, 'Reflets Urbains', 'Reflets des lumières et structures urbaines sur des surfaces d’eau près de la mer.'),
+(8, 'Reflets Nocturnes', 'Captures de reflets urbains ou naturels pendant la nuit, avec des jeux de lumières et de contrastes sombres sur l’eau.'),
+(9, 'Réflexions en Mouvement', 'Photographies de reflets en mouvement créant des effets de distorsion, de vagues ou d’éclaboussures pour une perspective dynamique.');
+
+
+INSERT INTO `t_concours_crs` (`crs_id`, `crs_nom`, `crs_description`, `crs_date_debut`, `crs_nb_jour_candidature`, `crs_nb_jour_preselection`, `crs_nb_jour_selection`, `crs_image`, `crs_edition`, `cpt_pseudo`) VALUES
+(1, 'Les Couleurs du Crépuscule Marin', 'Concours mettant en avant les magnifiques couleurs du crépuscule en bord de mer. Cette édition est centrée sur les clichés capturés en été.', '2024-06-01', 30, 15, 10, 'concours_couleurs_ete.jpg', 'Édition Été 2024', 'valerie.marc@univ-brest.fr'),
+(2, 'Les Couleurs du Crépuscule Marin', 'Concours mettant en avant les magnifiques couleurs du crépuscule en bord de mer. Cette édition est centrée sur les clichés hivernaux.', '2024-12-01', 30, 15, 10, 'concours_couleurs_hiver.jpg', 'Édition Hiver 2024', 'valerie.marc@univ-brest.fr'),
+(3, 'Reflets et Miroirs d’Eau', 'Concours mettant à l’honneur les reflets en bord de mer, où la mer devient un miroir et crée des jeux visuels uniques.', '2024-10-01', 30, 20, 10, 'concours_reflets_miroirs.jpg', 'Édition 2024', 'lou.simon.2287@gmail.com'),
+(4, 'Éclats de Lumière Marine', 'Ce concours invite les photographes à capturer les jeux de lumière et les reflets sur la mer au lever ou au coucher du soleil. L’objectif est de révéler la beauté de la lumière naturelle sur les eaux calmes ou agitées.', '2024-11-01', 40, 5, 5, 'concours_eclats_lumiere.jpg', 'Édition 2024', 'lou.simon.2287@gmail.com'),
+(5, 'Fascinations des Flots', 'Ce concours met en avant la diversité des vagues et des courants marins, qu’ils soient paisibles ou déchaînés. Les participants sont invités à soumettre des photos illustrant la puissance et la délicatesse de la mer en mouvement.', '2024-11-01', 5, 5, 40, 'concours_fascinations_flots.jpg', 'Édition 2024', 'lou.simon.2287@gmail.com');
+
+
+INSERT INTO `t_possede_psd` (`crs_id`, `cat_id`) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(4, 4),
+(4, 5),
+(3, 6),
+(3, 7),
+(5, 8),
+(5, 9);
+
+
+
+INSERT INTO `t_candidature_cdt` (`cdt_id`, `cdt_nom`, `cdt_prenom`, `cdt_age`, `cdt_email`, `cdt_code`, `cdt_code_dossier`, `cdt_presentation`, `cdt_etat`, `cdt_date`, `cat_id`, `crs_id`) VALUES
+(1, 'Turpin', 'Alexandre', 19, 'alex.turpin@hotmail.com', 'ALVHRFRT', 'FJSIRNCATPJRUFHTRHEM', 'Je suis passionné de la mer depuis tout petit et également de photographie, ce concours est donc idéal pour enrichir mon expérience et partager mes oeuvres.', 'inscriptions', CURDATE(), 8, 5),
+(2, 'Lemoine', 'Isabelle', 25, 'isa.lemoine@outlook.com', 'RFGTJSIP', 'FJRBEISNDOPQLSHJDPRF', 'Mon amour pour les reflets marins se manifeste à travers mes clichés.', 'inscriptions', CURDATE(), 8, 5),
+(3, 'Durand', 'Olivier', 34, 'olivier.durand@orange.fr', 'KJDSLOPT', 'HBGFTLSNEITZKROFIWQS', 'Les mouvements de la mer me passionnent', 'pré-sélection', CURDATE(), 9, 5),
+(4, 'Bernard', 'Sophie', 28, 'sophie.bernard@yahoo.com', 'XNZLROPI', 'MNVJTSEWRITKSYOFJLYP', 'Mes œuvres capturent les reflets en mouvements en bord de mer', 'finale', CURDATE(), 9, 5),
+(5, 'Petit', 'Marc', 21, 'marc.petit@protonmail.com', 'VBGHTYRT', 'WRNTKMSODITXQLPHYJLS', 'J’adore créer des photos uniques avec les reflets de diverses sources d\'eau.', 'terminé', CURDATE(), 3, 1),
+(6, 'Dufour', 'Caroline', 29, 'caroline.dufour@wanadoo.fr', 'ZCJRPLKS', 'NMJDUIWTPKEOTLPKHSLM', 'Je capture les reflets naturels de la mer à travers différents angles.', 'terminé', CURDATE(), 3, 1),
+(7, 'Leroy', 'François', 24, 'francois.leroy@free.fr', 'RTYPLFGJ', 'DMNSQBRUPLOITXZEPKJD', 'Les silhouettes marines et leurs ombres mystérieuses m\'ont toujours fasciné.', 'terminé', CURDATE(), 2, 1),
+(8, 'Martin', 'Julie', 31, 'julie.martin@sfr.fr', 'SJHGRTKP', 'QOTJRNTMSKWJLOPFERTH', 'Mes clichés expriment l\'harmonie entre la mer et la lumière hivernale.', 'terminé', CURDATE(), 2, 1),
+(9, 'Renard', 'Théo', 23, 'theo.renard@laposte.net', 'LJRTYPWG', 'IOWRLTPKDSJVZNMQSFHG', 'Ma passion pour les couchers de soleil me pousse à chercher la perfection dans chaque cliché.', 'terminé', CURDATE(), 1, 1),
+(10, 'Fabre', 'Camille', 27, 'camille.fabre@bbox.fr', 'QTPFLJNW', 'QPLSJDYITXWNROGFKLTB', 'Les lumières du soleil m\'inspirent, surtout lors d\'un coucher de soleil.', 'terminé', CURDATE(), 1, 1);
+
+
+
+
+
+INSERT INTO `t_document_doc` (`doc_id`, `doc_nom`, `doc_descriptif`, `cdt_id`) VALUES
+(NULL, 'petit_photo1.jpg', 'Lumières du port la nuit', 5), 
+(NULL, 'petit_photo2.jpg', 'Lumières du port la nuit', 5),
+(NULL, 'dufour_photo.jpg', 'Reflets naturels dans une crique', 6), 
+(NULL, 'leroy_photo.jpg', 'Ombres et lumières d’hiver', 7), 
+(NULL, 'martin_photo1.jpg', 'Reflets urbains nocturnes', 8),
+(NULL, 'martin_photo2.jpg', 'Reflets urbains nocturnes', 8),
+(NULL, 'renard_photo1.jpg', 'Couleurs du crépuscule glacial', 9),
+(NULL, 'renard_photo2.jpg', 'Couleurs du crépuscule glacial', 9),
+(NULL, 'renard_photo3.jpg', 'Couleurs du crépuscule glacial', 9),--
+(NULL, 'fabre_photo.jpg', 'Reflets d’un voilier', 10),--
+(NULL, 'turpin_photo.jpg', 'Reflets d’un voilier', 1),
+(NULL, 'lemoine_photo.jpg', 'Reflets d’un voilier', 2),--
+(NULL, 'durand_photo.jpg', 'Reflets d’un voilier', 3),
+(NULL, 'bernard_photo.jpg', 'Reflets d’un voilier', 4);
+
+
+
+INSERT INTO `t_actualite_act` (`act_id`, `act_titre`, `act_contenu`, `act_date`, `act_etat`, `crs_id`, `cpt_pseudo`) VALUES
+(1, 'Lancement du Concours Été', 'Nous sommes ravis d’annoncer le lancement du concours \"Les Couleurs du Crépuscule Marin\" pour la saison estivale. Préparez vos appareils photo et partagez vos plus belles prises !', '2024-10-03 12:15:15', 'A', 1, 'valerie.marc@univ-brest.fr'),
+(2, 'Rappel de Soumission', 'N’oubliez pas que la date limite de soumission des photos est dans 15 jours. Assurez-vous que vos œuvres sont prêtes pour le concours.', '2024-10-10 12:00:15', 'A', 1, 'valerie.marc@univ-brest.fr'),
+(3, 'Ouverture des Inscrits', 'Le concours \"Les Couleurs du Crépuscule Marin\" édition hiver est maintenant ouvert. Nous avons hâte de découvrir vos photos hivernales !', '2024-10-03 10:15:15', 'A', 2, 'valerie.marc@univ-brest.fr'),
+(4, 'Conseils de Prise de Vue', 'Découvrez nos conseils pour capturer les plus belles lumières de l’hiver lors de ce concours. Restez inspirés !', '2024-10-08 12:15:15', 'D', 2, 'valerie.marc@univ-brest.fr'),
+(5, 'Lancement du Concours Reflets', 'Le concours \"Reflets et Miroirs d’Eau\" est maintenant ouvert ! Partagez vos plus beaux clichés capturés près de l’eau.', '2024-10-03 12:15:15', 'A', 3, 'lou.simon.2287@gmail.com'),
+(6, 'Clôture des Candidatures', 'La date limite de soumission des photos pour le concours \"Reflets et Miroirs d’Eau\" approche. N’oubliez pas d’envoyer vos œuvres avant la date limite !', '2024-10-13 12:15:15', 'A', 3, 'lou.simon.2287@gmail.com');
+
+
+
+
+INSERT INTO `t_discussion_dsc` (`dsc_id`, `dsc_sujet`, `crs_id`) VALUES
+(1, 'Ajustement des notes du concours', 1),
+(2, 'Photographies Madame Le Moine', 2);
+
+
+INSERT INTO `t_message_msg` (`msg_id`, `msg_contenu`, `msg_date_publication`, `dsc_id`, `msg_etat`, `cpt_pseudo`) VALUES
+(1, 'Bonjour, je voudrais que l\'on discute à propos de la grille d\'évaluation du concours.', '2024-10-03 20:28:59', 1, 'V', 'jean.martin@yahoo.com'),
+(2, 'Bonjour, je suis d\'accord, seriez-vous dissponible pour un rendez-vous demain ?', '2024-10-03 20:30:44', 1, 'V', 'marie.gautier@orange.fr'),
+(3, 'Biensure, à demain !', '2024-10-03 20:30:44', 1, 'V', 'jean.martin@yahoo.com'),
+(4, 'Bonjour, la photographie me semble familière, pensez-vous qu\'il serait judicieux de demander les sources à cette candidate ?', '2024-10-03 20:34:17', 2, 'V', 'luc.brunet@free.fr'),
+(5, 'Bonjour, oui c\'est une bonne idée, j\'ai eu quelques doutes également lorsque je l\'ai visionnée.', '2024-10-03 20:34:17', 2, 'V', 'sophie.dubois@hotmail.com'),
+(6, 'Très bien, je vais envoyer un Email à la personne concernée.', '2024-10-03 20:34:17', 2, 'V', 'luc.brunet@free.fr');
+
+
+INSERT INTO `t_juge_jug` (`crs_id`, `cpt_pseudo`) VALUES
+(1, 'jean.martin@yahoo.com'),
+(1, 'marie.gautier@orange.fr'),
+(4, 'luc.brunet@free.fr'),
+(4, 'sophie.dubois@hotmail.com'),
+(3, 'marie.gautier@orange.fr'),
+(3, 'nicolas.robin@live.com'),
+(5, 'catherine.leroux@gmail.com'),
+(5, 'pierre.durand@yahoo.com');
+
+
+-- Concours 1 : Les Couleurs du Crépuscule Marin (Édition Été 2024)
+INSERT INTO `t_evalue_evl` (`cdt_id`, `cpt_pseudo`, `evl_note`, `evl_commentaire`, `evl_date`) VALUES
+(5, 'jean.martin@yahoo.com', 2, 'Beau cliché, capturant bien les couleurs.', NOW()),
+(5, 'marie.gautier@orange.fr', 3, 'Magnifique composition mais manque de contraste.', NOW()),
+(7, 'jean.martin@yahoo.com', 2, 'Bonne technique et sujet intéressant.', NOW()),
+(8, 'marie.gautier@orange.fr', 1, 'Belle photo avec des couleurs éclatantes.', NOW()),
+(9, 'jean.martin@yahoo.com', 1, 'Originalité dans le choix du cadre.', NOW()),
+(9, 'marie.gautier@orange.fr', 1, 'Bon angle de prise de vue, belle ambiance.', NOW()),
+-- Concours 5 
+(1, 'catherine.leroux@gmail.com', 2, 'Beau cliché, capturant bien les couleurs nocturnes à travers un reflet', NOW()),
+(2, 'pierre.durand@yahoo.com', 3, 'Magnifique composition mais manque de contraste.', NOW()),
+(3, 'catherine.leroux@gmail.com', 2, 'Bonne technique et sujet intéressant.', NOW()),
+(4, 'pierre.durand@yahoo.com', 2, 'Belle photo avec des couleurs éclatantes.', NOW()),
+(4, 'catherine.leroux@gmail.com', 1, 'Originalité dans le choix de l\'environnement', NOW());

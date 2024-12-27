@@ -1,0 +1,267 @@
+
+CREATE TABLE IF NOT EXISTS `e22204198_db1`.`t_categorie_cat` (
+  `cat_id` INT NOT NULL AUTO_INCREMENT,
+  `cat_nom` VARCHAR(200) NOT NULL,
+  `cat_description` VARCHAR(300) NOT NULL,
+  PRIMARY KEY (`cat_id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `e22204198_db1`.`t_compte_cpt`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `e22204198_db1`.`t_compte_cpt` (
+  `cpt_pseudo` VARCHAR(200) NOT NULL,
+  `cpt_mdp` CHAR(128) NOT NULL,
+  PRIMARY KEY (`cpt_pseudo`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `e22204198_db1`.`t_gerant_grt`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `e22204198_db1`.`t_gerant_grt` (
+  `cpt_pseudo` VARCHAR(200) NOT NULL,
+  `grt_etat` CHAR(1) NOT NULL,
+  PRIMARY KEY (`cpt_pseudo`),
+  CONSTRAINT `fk_t_grt_t_cpt`
+    FOREIGN KEY (`cpt_pseudo`)
+    REFERENCES `e22204198_db1`.`t_compte_cpt` (`cpt_pseudo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `e22204198_db1`.`t_concours_crs`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `e22204198_db1`.`t_concours_crs` (
+  `crs_id` INT NOT NULL AUTO_INCREMENT,
+  `crs_nom` VARCHAR(200) NOT NULL,
+  `crs_description` VARCHAR(300) NOT NULL,
+  `crs_date_debut` DATE NOT NULL,
+  `crs_nb_jour_candidature` INT NOT NULL,
+  `crs_nb_jour_preselection` INT NOT NULL,
+  `crs_nb_jour_selection` INT NOT NULL,
+  `crs_image` VARCHAR(300) NOT NULL,
+  `crs_edition` VARCHAR(60) NOT NULL,
+  `cpt_pseudo` VARCHAR(200) NULL,
+  PRIMARY KEY (`crs_id`),
+  INDEX `fk_t_concours_crs_t_gerant_grt1_idx` (`cpt_pseudo` ASC),
+  CONSTRAINT `fk_t_concours_crs_t_gerant_grt1`
+    FOREIGN KEY (`cpt_pseudo`)
+    REFERENCES `e22204198_db1`.`t_gerant_grt` (`cpt_pseudo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `e22204198_db1`.`t_candidature_cdt`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `e22204198_db1`.`t_candidature_cdt` (
+  `cdt_id` INT NOT NULL AUTO_INCREMENT,
+  `cdt_nom` VARCHAR(60) NOT NULL,
+  `cdt_prenom` VARCHAR(50) NOT NULL,
+  `cdt_age` INT NOT NULL,
+  `cdt_email` VARCHAR(200) NOT NULL,
+  `cdt_code` CHAR(8) NOT NULL,
+  `cdt_code_dossier` CHAR(20) NOT NULL,
+  `cdt_presentation` VARCHAR(1000) NOT NULL,
+  `cdt_etat` VARCHAR(20) NOT NULL,
+  `cdt_date` DATE NOT NULL,
+  `cat_id` INT NOT NULL,
+  `crs_id` INT NOT NULL,
+  PRIMARY KEY (`cdt_id`),
+  INDEX `fk_t_candidature_cdt_t_catergorie_cat1_idx` (`cat_id` ASC),
+  INDEX `fk_t_candidature_cdt_t_concours_crs1_idx` (`crs_id` ASC),
+  CONSTRAINT `fk_t_candidature_cdt_t_catergorie_cat1`
+    FOREIGN KEY (`cat_id`)
+    REFERENCES `e22204198_db1`.`t_categorie_cat` (`cat_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_t_candidature_cdt_t_concours_crs1`
+    FOREIGN KEY (`crs_id`)
+    REFERENCES `e22204198_db1`.`t_concours_crs` (`crs_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `e22204198_db1`.`t_possede_psd`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `e22204198_db1`.`t_possede_psd` (
+  `crs_id` INT NOT NULL,
+  `cat_id` INT NOT NULL,
+  INDEX `fk_t_possede_psd_t_concours_crs1_idx` (`crs_id` ASC),
+  INDEX `fk_t_possede_psd_t_catergorie_cat1_idx` (`cat_id` ASC),
+  CONSTRAINT `fk_t_possede_psd_t_concours_crs1`
+    FOREIGN KEY (`crs_id`)
+    REFERENCES `e22204198_db1`.`t_concours_crs` (`crs_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_t_possede_psd_t_catergorie_cat1`
+    FOREIGN KEY (`cat_id`)
+    REFERENCES `e22204198_db1`.`t_categorie_cat` (`cat_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `e22204198_db1`.`t_actualite_act`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `e22204198_db1`.`t_actualite_act` (
+  `act_id` INT NOT NULL AUTO_INCREMENT,
+  `act_titre` VARCHAR(60) NOT NULL,
+  `act_contenu` VARCHAR(300) NOT NULL,
+  `act_date` DATETIME NOT NULL,
+  `act_etat` CHAR(1) NOT NULL,
+  `crs_id` INT NOT NULL,
+  `cpt_pseudo` VARCHAR(200) NOT NULL,
+  PRIMARY KEY (`act_id`),
+  INDEX `fk_t_actualite_act_t_concours_crs1_idx` (`crs_id` ASC),
+  INDEX `fk_t_actualite_act_t_gerant_grt1_idx` (`cpt_pseudo` ASC),
+  CONSTRAINT `fk_t_actualite_act_t_concours_crs1`
+    FOREIGN KEY (`crs_id`)
+    REFERENCES `e22204198_db1`.`t_concours_crs` (`crs_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_t_actualite_act_t_gerant_grt1`
+    FOREIGN KEY (`cpt_pseudo`)
+    REFERENCES `e22204198_db1`.`t_gerant_grt` (`cpt_pseudo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `e22204198_db1`.`t_jury_jry`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `e22204198_db1`.`t_jury_jry` (
+  `cpt_pseudo` VARCHAR(200) NOT NULL,
+  `jry_nom` VARCHAR(60) NOT NULL,
+  `jry_prenom` VARCHAR(50) NOT NULL,
+  `jry_biographie` VARCHAR(1000) NOT NULL,
+  `jry_discipline` VARCHAR(200) NOT NULL,
+  `jry_url` VARCHAR(300) NULL,
+  `jry_etat` CHAR(1) NOT NULL,
+  `jry_image` VARCHAR(300) NOT NULL,
+  PRIMARY KEY (`cpt_pseudo`),
+  INDEX `fk_t_jury_jry_t_compte_cpt1_idx` (`cpt_pseudo` ASC),
+  CONSTRAINT `fk_t_jury_jry_t_compte_cpt1`
+    FOREIGN KEY (`cpt_pseudo`)
+    REFERENCES `e22204198_db1`.`t_compte_cpt` (`cpt_pseudo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `e22204198_db1`.`t_discussion_dsc`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `e22204198_db1`.`t_discussion_dsc` (
+  `dsc_id` INT NOT NULL AUTO_INCREMENT,
+  `dsc_sujet` VARCHAR(200) NOT NULL,
+  `crs_id` INT NOT NULL,
+  PRIMARY KEY (`dsc_id`, `crs_id`),
+  INDEX `fk_t_discussion_dsc_t_concours_crs1_idx` (`crs_id` ASC),
+  CONSTRAINT `fk_t_discussion_dsc_t_concours_crs1`
+    FOREIGN KEY (`crs_id`)
+    REFERENCES `e22204198_db1`.`t_concours_crs` (`crs_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `e22204198_db1`.`t_message_msg`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `e22204198_db1`.`t_message_msg` (
+  `msg_id` INT NOT NULL AUTO_INCREMENT,
+  `msg_contenu` VARCHAR(500) NOT NULL,
+  `msg_date_publication` DATETIME NOT NULL,
+  `dsc_id` INT NOT NULL,
+  `msg_etat` CHAR(1) NOT NULL,
+  `cpt_pseudo` VARCHAR(200) NOT NULL,
+  PRIMARY KEY (`msg_id`),
+  INDEX `fk_t_message_msg_t_discussion_dsc1_idx` (`dsc_id` ASC),
+  INDEX `fk_t_message_msg_t_jury_jry1_idx` (`cpt_pseudo` ASC),
+  CONSTRAINT `fk_t_message_msg_t_discussion_dsc1`
+    FOREIGN KEY (`dsc_id`)
+    REFERENCES `e22204198_db1`.`t_discussion_dsc` (`dsc_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_t_message_msg_t_jury_jry1`
+    FOREIGN KEY (`cpt_pseudo`)
+    REFERENCES `e22204198_db1`.`t_jury_jry` (`cpt_pseudo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `e22204198_db1`.`t_document_doc`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `e22204198_db1`.`t_document_doc` (
+  `doc_id` INT NOT NULL AUTO_INCREMENT,
+  `doc_nom` VARCHAR(60) NULL,
+  `doc_descriptif` VARCHAR(255) NULL,
+  `cdt_id` INT NOT NULL,
+  PRIMARY KEY (`doc_id`, `cdt_id`),
+  INDEX `fk_t_document_doc_t_candidature_cdt1_idx` (`cdt_id` ASC),
+  CONSTRAINT `fk_t_document_doc_t_candidature_cdt1`
+    FOREIGN KEY (`cdt_id`)
+    REFERENCES `e22204198_db1`.`t_candidature_cdt` (`cdt_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `e22204198_db1`.`t_juge_jug`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `e22204198_db1`.`t_juge_jug` (
+  `crs_id` INT NOT NULL,
+  `cpt_pseudo` VARCHAR(200) NOT NULL,
+  PRIMARY KEY (`crs_id`, `cpt_pseudo`),
+  INDEX `fk_t_concours_crs_has_t_jury_jry_t_jury_jry1_idx` (`cpt_pseudo` ASC),
+  INDEX `fk_t_concours_crs_has_t_jury_jry_t_concours_crs1_idx` (`crs_id` ASC),
+  CONSTRAINT `fk_t_concours_crs_has_t_jury_jry_t_concours_crs1`
+    FOREIGN KEY (`crs_id`)
+    REFERENCES `e22204198_db1`.`t_concours_crs` (`crs_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_t_concours_crs_has_t_jury_jry_t_jury_jry1`
+    FOREIGN KEY (`cpt_pseudo`)
+    REFERENCES `e22204198_db1`.`t_jury_jry` (`cpt_pseudo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `e22204198_db1`.`t_evalue_evl`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `e22204198_db1`.`t_evalue_evl` (
+  `cdt_id` INT NOT NULL,
+  `cpt_pseudo` VARCHAR(200) NOT NULL,
+  `evl_note` TINYINT NOT NULL,
+  `evl_commentaire` VARCHAR(500) NOT NULL,
+  `evl_date` DATE NOT NULL,
+  PRIMARY KEY (`cdt_id`, `cpt_pseudo`),
+  INDEX `fk_t_candidature_cdt_has_t_jury_jry_t_jury_jry1_idx` (`cpt_pseudo` ASC),
+  INDEX `fk_t_candidature_cdt_has_t_jury_jry_t_candidature_cdt1_idx` (`cdt_id` ASC),
+  CONSTRAINT `fk_t_candidature_cdt_has_t_jury_jry_t_candidature_cdt1`
+    FOREIGN KEY (`cdt_id`)
+    REFERENCES `e22204198_db1`.`t_candidature_cdt` (`cdt_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_t_candidature_cdt_has_t_jury_jry_t_jury_jry1`
+    FOREIGN KEY (`cpt_pseudo`)
+    REFERENCES `e22204198_db1`.`t_jury_jry` (`cpt_pseudo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+

@@ -1,0 +1,588 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.3
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : localhost
+-- Généré le : ven. 04 oct. 2024 à 11:11
+-- Version du serveur : 10.4.24-MariaDB
+-- Version de PHP : 7.4.28
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données : `e22204198_db1`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_actualite_act`
+--
+
+CREATE TABLE `t_actualite_act` (
+  `act_id` int(11) NOT NULL,
+  `act_titre` varchar(60) NOT NULL,
+  `act_contenu` varchar(300) NOT NULL,
+  `act_date` datetime NOT NULL,
+  `crs_id` int(11) NOT NULL,
+  `cpt_pseudo` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `t_actualite_act`
+--
+
+INSERT INTO `t_actualite_act` (`act_id`, `act_titre`, `act_contenu`, `act_date`, `crs_id`, `cpt_pseudo`) VALUES
+(1, 'Lancement du Concours Été', 'Nous sommes ravis d’annoncer le lancement du concours \"Les Couleurs du Crépuscule Marin\" pour la saison estivale. Préparez vos appareils photo et partagez vos plus belles prises !', '2024-10-03 12:15:15', 1, 'valerie.marc@univ-brest.fr'),
+(2, 'Rappel de Soumission', 'N’oubliez pas que la date limite de soumission des photos est dans 15 jours. Assurez-vous que vos œuvres sont prêtes pour le concours.', '2024-10-10 12:15:15', 1, 'valerie.marc@univ-brest.fr'),
+(3, 'Ouverture des Inscrits', 'Le concours \"Les Couleurs du Crépuscule Marin\" édition hiver est maintenant ouvert. Nous avons hâte de découvrir vos photos hivernales !', '2024-10-03 12:15:15', 2, 'valerie.marc@univ-brest.fr'),
+(4, 'Conseils de Prise de Vue', 'Découvrez nos conseils pour capturer les plus belles lumières de l’hiver lors de ce concours. Restez inspirés !', '2024-10-08 12:15:15', 2, 'valerie.marc@univ-brest.fr'),
+(5, 'Lancement du Concours Reflets', 'Le concours \"Reflets et Miroirs d’Eau\" est maintenant ouvert ! Partagez vos plus beaux clichés capturés près de l’eau.', '2024-10-03 12:15:15', 3, 'lou.simon.2287@gmail.com'),
+(6, 'Clôture des Candidatures', 'La date limite de soumission des photos pour le concours \"Reflets et Miroirs d’Eau\" approche. N’oubliez pas d’envoyer vos œuvres avant la date limite !', '2024-10-13 12:15:15', 3, 'lou.simon.2287@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_candidature_cdt`
+--
+
+CREATE TABLE `t_candidature_cdt` (
+  `cdt_id` int(11) NOT NULL,
+  `cdt_nom` varchar(60) NOT NULL,
+  `cdt_prenom` varchar(50) NOT NULL,
+  `cdt_age` int(11) NOT NULL,
+  `cdt_email` varchar(200) NOT NULL,
+  `cdt_code` char(8) NOT NULL,
+  `cdt_code_dossier` char(20) NOT NULL,
+  `cdt_presentation` varchar(1000) NOT NULL,
+  `cdt_etat` char(1) NOT NULL,
+  `cat_id` int(11) NOT NULL,
+  `crs_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `t_candidature_cdt`
+--
+
+INSERT INTO `t_candidature_cdt` (`cdt_id`, `cdt_nom`, `cdt_prenom`, `cdt_age`, `cdt_email`, `cdt_code`, `cdt_code_dossier`, `cdt_presentation`, `cdt_etat`, `cat_id`, `crs_id`) VALUES
+(1, 'Turpin', 'Alexandre', 19, 'alex.turpin@hotmail.com', 'ALVHRFRT', 'FJSIRNCATPJRUFHTRHEM', 'Je suis passionné de la mer depuis tout petit et également de photographie, ce concours est donc idéal pour enrichir mon expérience et partager mes oeuvres.', 'C', 1, 1),
+(2, 'Lemoine', 'Isabelle', 25, 'isa.lemoine@outlook.com', 'RFGTJSIP', 'FJRBEISNDOPQLSHJDPRF', 'Mon amour pour les reflets marins se manifeste à travers mes clichés.', 'C', 3, 3),
+(3, 'Durand', 'Olivier', 34, 'olivier.durand@orange.fr', 'KJDSLOPT', 'HBGFTLSNEITZKROFIWQS', 'Les lumières d’hiver donnent une teinte particulière à mes photos.', 'C', 5, 2),
+(4, 'Bernard', 'Sophie', 28, 'sophie.bernard@yahoo.com', 'XNZLROPI', 'MNVJTSEWRITKSYOFJLYP', 'Mes œuvres capturent les reflets urbains en bord de mer.', 'C', 7, 3),
+(5, 'Petit', 'Marc', 21, 'marc.petit@protonmail.com', 'VBGHTYRT', 'WRNTKMSODITXQLPHYJLS', 'J’adore immortaliser la mer lors de crépuscules glacials.', 'C', 4, 2),
+(6, 'Dufour', 'Caroline', 29, 'caroline.dufour@wanadoo.fr', 'ZCJRPLKS', 'NMJDUIWTPKEOTLPKHSLM', 'Les silhouettes marines et leurs ombres mystérieuses m’ont toujours fasciné.', 'C', 2, 1),
+(7, 'Leroy', 'François', 24, 'francois.leroy@free.fr', 'RTYPLFGJ', 'DMNSQBRUPLOITXZEPKJD', 'Je capture les reflets naturels de la mer à travers différents angles.', 'C', 6, 3),
+(8, 'Martin', 'Julie', 31, 'julie.martin@sfr.fr', 'SJHGRTKP', 'QOTJRNTMSKWJLOPFERTH', 'Mes clichés expriment l’harmonie entre la mer et la lumière hivernale.', 'C', 5, 2),
+(9, 'Renard', 'Théo', 23, 'theo.renard@laposte.net', 'LJRTYPWG', 'IOWRLTPKDSJVZNMQSFHG', 'Ma passion pour les reflets me pousse à chercher la perfection dans chaque cliché.', 'C', 3, 1),
+(10, 'Fabre', 'Camille', 27, 'camille.fabre@bbox.fr', 'QTPFLJNW', 'QPLSJDYITXWNROGFKLTB', 'Les paysages maritimes m’inspirent au quotidien pour des photos uniques.', 'C', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_categorie_cat`
+--
+
+CREATE TABLE `t_categorie_cat` (
+  `cat_id` int(11) NOT NULL,
+  `cat_nom` varchar(200) NOT NULL,
+  `cat_description` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `t_categorie_cat`
+--
+
+INSERT INTO `t_categorie_cat` (`cat_id`, `cat_nom`, `cat_description`) VALUES
+(1, 'Paysages Maritimes', 'Catégorie dédiée aux clichés capturés durant les heures du crépuscule.'),
+(2, 'Silhouettes et Ombres', 'Catégorie pour les paysages marins capturés à différents moments de la journée.'),
+(3, 'Couleurs en Reflet', 'Catégorie mettant l’accent sur les reflets d’eau et leurs effets visuels.'),
+(4, 'Crépuscule Glacial', 'Catégorie dédiée aux prises de vue en hiver, avec des paysages enneigés et glacés.'),
+(5, 'Lumières Hivernales', 'Catégorie pour les œuvres d’art et les interprétations créatives liées à la mer.'),
+(6, 'Miroirs d’Eau Naturels', 'Photographies mettant en scène des reflets naturels sur la mer ou les lacs.'),
+(7, 'Reflets Urbains', 'Reflets des lumières et structures urbaines sur des surfaces d’eau près de la mer.');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_compte_cpt`
+--
+
+CREATE TABLE `t_compte_cpt` (
+  `cpt_pseudo` varchar(200) NOT NULL,
+  `cpt_mdp` char(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `t_compte_cpt`
+--
+
+INSERT INTO `t_compte_cpt` (`cpt_pseudo`, `cpt_mdp`) VALUES
+('jean.martin@yahoo.com', 'a09b1b92ecfc4bb0fd754f23e2cb2a5040a34ef4ecb7bbc056071ba67344e2c9'),
+('lou.simon.2287@gmail.com', '01d4ef7a67465abf1f297c0784209c5cdbe558b04187d0e81bea53095053a6d9'),
+('luc.brunet@free.fr', '3c63854c77c87c96b467b74ee815adae628342563a9826672afba6741def8c6f'),
+('marie.gautier@orange.fr', '241380f3976f4baf2f37ab09eb4c5cc4c8fc74f2a397230a1bb84790a012616a'),
+('nicolas.robin@live.com', '15d8dda53a8362addf01e324f7a685127d33af1a7e8d2bfbbfffc2d5a0d14027'),
+('organisateur', 'c9a09d5ffb9d411b1ee47bdbf2a7f5b443dac1320545287373541b930e38b6ea'),
+('sophie.dubois@hotmail.com', '54e650bcd82c2564b7c41943f11c00c1f424760dd2e4c3951b58fc25d9699693'),
+('valerie.marc@univ-brest.fr', 'ad7f12d8f457a867d1d820e98eb8b416d075b6e68a06c7ca9bfef3b2a235f5c5');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_concours_crs`
+--
+
+CREATE TABLE `t_concours_crs` (
+  `crs_id` int(11) NOT NULL,
+  `crs_nom` varchar(200) NOT NULL,
+  `crs_description` varchar(300) NOT NULL,
+  `crs_date_debut` date NOT NULL,
+  `crs_nb_jour_candidature` int(11) NOT NULL,
+  `crs_nb_jour_preselection` int(11) NOT NULL,
+  `crs_nb_jour_selection` int(11) NOT NULL,
+  `crs_image` varchar(300) NOT NULL,
+  `crs_edition` varchar(60) NOT NULL,
+  `cpt_pseudo` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `t_concours_crs`
+--
+
+INSERT INTO `t_concours_crs` (`crs_id`, `crs_nom`, `crs_description`, `crs_date_debut`, `crs_nb_jour_candidature`, `crs_nb_jour_preselection`, `crs_nb_jour_selection`, `crs_image`, `crs_edition`, `cpt_pseudo`) VALUES
+(1, 'Les Couleurs du Crépuscule Marin', 'Concours mettant en avant les magnifiques couleurs du crépuscule en bord de mer. Cette édition est centrée sur les clichés capturés en été.', '2024-06-01', 30, 15, 10, 'concours_couleurs_ete.jpg', 'Édition Été 2024', 'valerie.marc@univ-brest.fr'),
+(2, 'Les Couleurs du Crépuscule Marin', 'Concours mettant en avant les magnifiques couleurs du crépuscule en bord de mer. Cette édition est centrée sur les clichés hivernaux.', '2024-12-01', 30, 15, 10, 'concours_couleurs_hiver.jpg', 'Édition Hiver 2024', 'valerie.marc@univ-brest.fr'),
+(3, 'Reflets et Miroirs d’Eau', 'Concours mettant à l’honneur les reflets en bord de mer, où la mer devient un miroir et crée des jeux visuels uniques.', '2024-09-01', 30, 20, 10, 'concours_reflets_miroirs.jpg', 'Édition 2024', 'lou.simon.2287@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_discussion_dsc`
+--
+
+CREATE TABLE `t_discussion_dsc` (
+  `dsc_id` int(11) NOT NULL,
+  `dsc_sujet` varchar(200) NOT NULL,
+  `crs_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `t_discussion_dsc`
+--
+
+INSERT INTO `t_discussion_dsc` (`dsc_id`, `dsc_sujet`, `crs_id`) VALUES
+(1, 'Ajustement des notes du concours', 1),
+(2, 'Photographies Madame Le Moine', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_document_doc`
+--
+
+CREATE TABLE `t_document_doc` (
+  `doc_id` int(11) NOT NULL,
+  `doc_nom` varchar(60) DEFAULT NULL,
+  `doc_descriptif` varchar(255) DEFAULT NULL,
+  `cdt_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `t_document_doc`
+--
+
+INSERT INTO `t_document_doc` (`doc_id`, `doc_nom`, `doc_descriptif`, `cdt_id`) VALUES
+(1, 'photo_concours_turpin_alexandre.jpg', 'Coucher de soleil sur la mer', 1),
+(2, 'photo_concours_gautier_marie.jpg', 'Reflets urbains sur l’eau', 2),
+(3, 'photo_concours_robin_nicolas.jpg', 'Paysage marin hivernal', 3),
+(4, 'photo_concours_brunet_luc.jpg', 'Silhouettes au crépuscule', 4),
+(5, 'photo_concours_dubois_sophie.jpg', 'Lumières du port la nuit', 5),
+(6, 'photo_concours_marc_valerie.jpg', 'Reflets naturels dans une crique', 6),
+(7, 'photo_concours_martin_jean.jpg', 'Ombres et lumières d’hiver', 7),
+(8, 'photo_concours_turpin_alexandre_2.jpg', 'Reflets urbains nocturnes', 8),
+(9, 'photo_concours_turpin_alexandre_3.jpg', 'Couleurs du crépuscule glacial', 9),
+(10, 'photo_concours_turpin_alexandre_4.jpg', 'Reflets d’un voilier', 10);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_evalue_evl`
+--
+
+CREATE TABLE `t_evalue_evl` (
+  `cdt_id` int(11) NOT NULL,
+  `cpt_pseudo` varchar(200) NOT NULL,
+  `evl_note` varchar(45) NOT NULL,
+  `evl_commentaire` varchar(500) NOT NULL,
+  `evl_date` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `t_evalue_evl`
+--
+
+INSERT INTO `t_evalue_evl` (`cdt_id`, `cpt_pseudo`, `evl_note`, `evl_commentaire`, `evl_date`) VALUES
+(1, 'jean.martin@yahoo.com', '4', 'Excellente composition et technique.', '2024-10-03 17:12:43'),
+(1, 'marie.gautier@orange.fr', '3', 'Très beau cliché, mais un peu trop sombre.', '2024-10-03 17:12:43'),
+(2, 'luc.brunet@free.fr', '4', 'Superbe paysage, j’adore la lumière!', '2024-10-03 17:12:43'),
+(2, 'sophie.dubois@hotmail.com', '2', 'Image intéressante, mais manque de clarté.', '2024-10-03 17:12:43'),
+(3, 'marie.gautier@orange.fr', '3', 'Bien, mais la photo semble un peu floue.', '2024-10-03 17:12:43'),
+(3, 'nicolas.robin@live.com', '4', 'Une photo très émotive, j\"aime beaucoup!', '2024-10-03 17:12:43'),
+(4, 'jean.martin@yahoo.com', '3', 'Belle image, mais un peu trop de retouche.', '2024-10-03 17:12:43'),
+(5, 'luc.brunet@free.fr', '1', 'Peu d’originalité dans cette image.', '2024-10-03 17:12:43'),
+(5, 'marie.gautier@orange.fr', '4', 'Une œuvre d’art captivante, bravo!', '2024-10-03 17:12:43'),
+(6, 'nicolas.robin@live.com', '3', 'Jolie, mais un peu clichée.', '2024-10-03 17:12:43');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_gerant_grt`
+--
+
+CREATE TABLE `t_gerant_grt` (
+  `cpt_pseudo` varchar(200) NOT NULL,
+  `grt_etat` char(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `t_gerant_grt`
+--
+
+INSERT INTO `t_gerant_grt` (`cpt_pseudo`, `grt_etat`) VALUES
+('lou.simon.2287@gmail.com', 'A'),
+('organisateur', 'A'),
+('valerie.marc@univ-brest.fr', 'A');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_juge_jug`
+--
+
+CREATE TABLE `t_juge_jug` (
+  `crs_id` int(11) NOT NULL,
+  `cpt_pseudo` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `t_juge_jug`
+--
+
+INSERT INTO `t_juge_jug` (`crs_id`, `cpt_pseudo`) VALUES
+(1, 'jean.martin@yahoo.com'),
+(1, 'marie.gautier@orange.fr'),
+(2, 'luc.brunet@free.fr'),
+(2, 'sophie.dubois@hotmail.com'),
+(3, 'marie.gautier@orange.fr'),
+(3, 'nicolas.robin@live.com');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_jury_jry`
+--
+
+CREATE TABLE `t_jury_jry` (
+  `cpt_pseudo` varchar(200) NOT NULL,
+  `jry_nom` varchar(60) NOT NULL,
+  `jry_prenom` varchar(50) NOT NULL,
+  `jry_biographie` varchar(1000) NOT NULL,
+  `jry_discipline` varchar(200) NOT NULL,
+  `jry_url` varchar(300) DEFAULT NULL,
+  `jry_etat` char(1) NOT NULL,
+  `jry_image` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `t_jury_jry`
+--
+
+INSERT INTO `t_jury_jry` (`cpt_pseudo`, `jry_nom`, `jry_prenom`, `jry_biographie`, `jry_discipline`, `jry_url`, `jry_etat`, `jry_image`) VALUES
+('jean.martin@yahoo.com', 'Martin', 'Jean', 'Photographe passionné par la mer et les paysages côtiers.', 'Photographies côtières', NULL, 'A', 'photo_jry_martin.jpg'),
+('luc.brunet@free.fr', 'Brunet', 'Luc', 'Expert en photographie de faune marine.', 'Photographies de faune', NULL, 'A', 'photo_jry_brunet.jpg'),
+('marie.gautier@orange.fr', 'Gautier', 'Marie', 'Spécialiste des portraits en milieu marin.', 'Photographies de portraits', NULL, 'A', 'photo_jry_gautier.jpg'),
+('nicolas.robin@live.com', 'Robin', 'Nicolas', 'Photographe d’architecture maritime, avec un focus sur les ports.', 'Photographies d’architecture', NULL, 'A', 'photo_jry_robin.jpg'),
+('sophie.dubois@hotmail.com', 'Dubois', 'Sophie', 'Jury de plusieurs concours de photographie maritime, avec une passion pour les reflets.', 'Photographies artistiques', NULL, 'A', 'photo_jry_dubois.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_message_msg`
+--
+
+CREATE TABLE `t_message_msg` (
+  `msg_id` int(11) NOT NULL,
+  `msg_contenu` varchar(500) NOT NULL,
+  `msg_date_publication` datetime NOT NULL,
+  `dsc_id` int(11) NOT NULL,
+  `msg_etat` char(1) NOT NULL,
+  `cpt_pseudo` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `t_message_msg`
+--
+
+INSERT INTO `t_message_msg` (`msg_id`, `msg_contenu`, `msg_date_publication`, `dsc_id`, `msg_etat`, `cpt_pseudo`) VALUES
+(1, 'Bonjour, je voudrais que l\'on discute à propos de la grille d\'évaluation du concours.', '2024-10-03 20:28:59', 1, 'V', 'jean.martin@yahoo.com'),
+(2, 'Bonjour, je suis d\'accord, seriez-vous dissponible pour un rendez-vous demain ?', '2024-10-03 20:30:44', 1, 'V', 'marie.gautier@orange.fr'),
+(3, 'Biensure, à demain !', '2024-10-03 20:30:44', 1, 'V', 'jean.martin@yahoo.com'),
+(4, 'Bonjour, la photographie me semble familière, pensez-vous qu\'il serait judicieux de demander les sources à cette candidate ?', '2024-10-03 20:34:17', 2, 'V', 'luc.brunet@free.fr'),
+(5, 'Bonjour, oui c\'est une bonne idée, j\'ai eu quelques doutes également lorsque je l\'ai visionnée.', '2024-10-03 20:34:17', 2, 'V', 'sophie.dubois@hotmail.com'),
+(6, 'Très bien, je vais envoyer un Email à la personne concernée.', '2024-10-03 20:34:17', 2, 'V', 'luc.brunet@free.fr');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `t_possede_psd`
+--
+
+CREATE TABLE `t_possede_psd` (
+  `crs_id` int(11) NOT NULL,
+  `cat_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `t_possede_psd`
+--
+
+INSERT INTO `t_possede_psd` (`crs_id`, `cat_id`) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(2, 4),
+(2, 5),
+(3, 6),
+(3, 7);
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `t_actualite_act`
+--
+ALTER TABLE `t_actualite_act`
+  ADD PRIMARY KEY (`act_id`),
+  ADD KEY `fk_t_actualite_act_t_concours_crs1_idx` (`crs_id`),
+  ADD KEY `fk_t_actualite_act_t_gerant_grt1_idx` (`cpt_pseudo`);
+
+--
+-- Index pour la table `t_candidature_cdt`
+--
+ALTER TABLE `t_candidature_cdt`
+  ADD PRIMARY KEY (`cdt_id`),
+  ADD KEY `fk_t_candidature_cdt_t_catergorie_cat1_idx` (`cat_id`),
+  ADD KEY `fk_t_candidature_cdt_t_concours_crs1_idx` (`crs_id`);
+
+--
+-- Index pour la table `t_categorie_cat`
+--
+ALTER TABLE `t_categorie_cat`
+  ADD PRIMARY KEY (`cat_id`);
+
+--
+-- Index pour la table `t_compte_cpt`
+--
+ALTER TABLE `t_compte_cpt`
+  ADD PRIMARY KEY (`cpt_pseudo`);
+
+--
+-- Index pour la table `t_concours_crs`
+--
+ALTER TABLE `t_concours_crs`
+  ADD PRIMARY KEY (`crs_id`),
+  ADD KEY `fk_t_concours_crs_t_gerant_grt1_idx` (`cpt_pseudo`);
+
+--
+-- Index pour la table `t_discussion_dsc`
+--
+ALTER TABLE `t_discussion_dsc`
+  ADD PRIMARY KEY (`dsc_id`,`crs_id`),
+  ADD KEY `fk_t_discussion_dsc_t_concours_crs1_idx` (`crs_id`);
+
+--
+-- Index pour la table `t_document_doc`
+--
+ALTER TABLE `t_document_doc`
+  ADD PRIMARY KEY (`doc_id`,`cdt_id`),
+  ADD KEY `fk_t_document_doc_t_candidature_cdt1_idx` (`cdt_id`);
+
+--
+-- Index pour la table `t_evalue_evl`
+--
+ALTER TABLE `t_evalue_evl`
+  ADD PRIMARY KEY (`cdt_id`,`cpt_pseudo`),
+  ADD KEY `fk_t_candidature_cdt_has_t_jury_jry_t_jury_jry1_idx` (`cpt_pseudo`),
+  ADD KEY `fk_t_candidature_cdt_has_t_jury_jry_t_candidature_cdt1_idx` (`cdt_id`);
+
+--
+-- Index pour la table `t_gerant_grt`
+--
+ALTER TABLE `t_gerant_grt`
+  ADD PRIMARY KEY (`cpt_pseudo`);
+
+--
+-- Index pour la table `t_juge_jug`
+--
+ALTER TABLE `t_juge_jug`
+  ADD PRIMARY KEY (`crs_id`,`cpt_pseudo`),
+  ADD KEY `fk_t_concours_crs_has_t_jury_jry_t_jury_jry1_idx` (`cpt_pseudo`),
+  ADD KEY `fk_t_concours_crs_has_t_jury_jry_t_concours_crs1_idx` (`crs_id`);
+
+--
+-- Index pour la table `t_jury_jry`
+--
+ALTER TABLE `t_jury_jry`
+  ADD PRIMARY KEY (`cpt_pseudo`),
+  ADD KEY `fk_t_jury_jry_t_compte_cpt1_idx` (`cpt_pseudo`);
+
+--
+-- Index pour la table `t_message_msg`
+--
+ALTER TABLE `t_message_msg`
+  ADD PRIMARY KEY (`msg_id`),
+  ADD KEY `fk_t_message_msg_t_discussion_dsc1_idx` (`dsc_id`),
+  ADD KEY `fk_t_message_msg_t_jury_jry1_idx` (`cpt_pseudo`);
+
+--
+-- Index pour la table `t_possede_psd`
+--
+ALTER TABLE `t_possede_psd`
+  ADD KEY `fk_t_possede_psd_t_concours_crs1_idx` (`crs_id`),
+  ADD KEY `fk_t_possede_psd_t_catergorie_cat1_idx` (`cat_id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `t_actualite_act`
+--
+ALTER TABLE `t_actualite_act`
+  MODIFY `act_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT pour la table `t_candidature_cdt`
+--
+ALTER TABLE `t_candidature_cdt`
+  MODIFY `cdt_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT pour la table `t_categorie_cat`
+--
+ALTER TABLE `t_categorie_cat`
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT pour la table `t_concours_crs`
+--
+ALTER TABLE `t_concours_crs`
+  MODIFY `crs_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT pour la table `t_discussion_dsc`
+--
+ALTER TABLE `t_discussion_dsc`
+  MODIFY `dsc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `t_document_doc`
+--
+ALTER TABLE `t_document_doc`
+  MODIFY `doc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT pour la table `t_message_msg`
+--
+ALTER TABLE `t_message_msg`
+  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `t_actualite_act`
+--
+ALTER TABLE `t_actualite_act`
+  ADD CONSTRAINT `fk_t_actualite_act_t_concours_crs1` FOREIGN KEY (`crs_id`) REFERENCES `t_concours_crs` (`crs_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_t_actualite_act_t_gerant_grt1` FOREIGN KEY (`cpt_pseudo`) REFERENCES `t_gerant_grt` (`cpt_pseudo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `t_candidature_cdt`
+--
+ALTER TABLE `t_candidature_cdt`
+  ADD CONSTRAINT `fk_t_candidature_cdt_t_catergorie_cat1` FOREIGN KEY (`cat_id`) REFERENCES `t_categorie_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_t_candidature_cdt_t_concours_crs1` FOREIGN KEY (`crs_id`) REFERENCES `t_concours_crs` (`crs_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `t_concours_crs`
+--
+ALTER TABLE `t_concours_crs`
+  ADD CONSTRAINT `fk_t_concours_crs_t_gerant_grt1` FOREIGN KEY (`cpt_pseudo`) REFERENCES `t_gerant_grt` (`cpt_pseudo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `t_discussion_dsc`
+--
+ALTER TABLE `t_discussion_dsc`
+  ADD CONSTRAINT `fk_t_discussion_dsc_t_concours_crs1` FOREIGN KEY (`crs_id`) REFERENCES `t_concours_crs` (`crs_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `t_document_doc`
+--
+ALTER TABLE `t_document_doc`
+  ADD CONSTRAINT `fk_t_document_doc_t_candidature_cdt1` FOREIGN KEY (`cdt_id`) REFERENCES `t_candidature_cdt` (`cdt_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `t_evalue_evl`
+--
+ALTER TABLE `t_evalue_evl`
+  ADD CONSTRAINT `fk_t_candidature_cdt_has_t_jury_jry_t_candidature_cdt1` FOREIGN KEY (`cdt_id`) REFERENCES `t_candidature_cdt` (`cdt_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_t_candidature_cdt_has_t_jury_jry_t_jury_jry1` FOREIGN KEY (`cpt_pseudo`) REFERENCES `t_jury_jry` (`cpt_pseudo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `t_gerant_grt`
+--
+ALTER TABLE `t_gerant_grt`
+  ADD CONSTRAINT `fk_t_grt_t_cpt` FOREIGN KEY (`cpt_pseudo`) REFERENCES `t_compte_cpt` (`cpt_pseudo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `t_juge_jug`
+--
+ALTER TABLE `t_juge_jug`
+  ADD CONSTRAINT `fk_t_concours_crs_has_t_jury_jry_t_concours_crs1` FOREIGN KEY (`crs_id`) REFERENCES `t_concours_crs` (`crs_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_t_concours_crs_has_t_jury_jry_t_jury_jry1` FOREIGN KEY (`cpt_pseudo`) REFERENCES `t_jury_jry` (`cpt_pseudo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `t_jury_jry`
+--
+ALTER TABLE `t_jury_jry`
+  ADD CONSTRAINT `fk_t_jury_jry_t_compte_cpt1` FOREIGN KEY (`cpt_pseudo`) REFERENCES `t_compte_cpt` (`cpt_pseudo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `t_message_msg`
+--
+ALTER TABLE `t_message_msg`
+  ADD CONSTRAINT `fk_t_message_msg_t_discussion_dsc1` FOREIGN KEY (`dsc_id`) REFERENCES `t_discussion_dsc` (`dsc_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_t_message_msg_t_jury_jry1` FOREIGN KEY (`cpt_pseudo`) REFERENCES `t_jury_jry` (`cpt_pseudo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `t_possede_psd`
+--
+ALTER TABLE `t_possede_psd`
+  ADD CONSTRAINT `fk_t_possede_psd_t_catergorie_cat1` FOREIGN KEY (`cat_id`) REFERENCES `t_categorie_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_t_possede_psd_t_concours_crs1` FOREIGN KEY (`crs_id`) REFERENCES `t_concours_crs` (`crs_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

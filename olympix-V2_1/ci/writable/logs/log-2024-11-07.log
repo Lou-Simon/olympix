@@ -1,0 +1,1226 @@
+CRITICAL - 2024-11-07 07:38:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "compte/compte_succes.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Compte.php(47): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-07 07:40:33 --> mysqli_sql_exception: Duplicate entry 'e22204198' for key 'PRIMARY' in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->creer()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-11-07 07:40:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'e22204198' for key 'PRIMARY'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 07:40:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'e22204198' for key 'PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 07:40:33 --> [Caused by] mysqli_sql_exception: Duplicate entry 'e22204198' for key 'PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 07:40:51 --> ErrorException: Undefined property: stdClass::$nb
+in APPPATH/Views/compte/compte_succes.php on line 5.
+ 1 APPPATH/Views/compte/compte_succes.php(5): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2024DIFAL3/e22204198/public_html/V1/ci/app/Views/compte/compte_succes.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Compte.php(47): view()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-07 07:41:24 --> mysqli_sql_exception: Duplicate entry 'test' for key 'PRIMARY' in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->creer()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-11-07 07:41:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'test' for key 'PRIMARY'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 07:41:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'test' for key 'PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 07:41:24 --> [Caused by] mysqli_sql_exception: Duplicate entry 'test' for key 'PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-07 07:41:56 --> mysqli_sql_exception: Duplicate entry 'e22204198' for key 'PRIMARY' in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->creer()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-11-07 07:41:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'e22204198' for key 'PRIMARY'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 07:41:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'e22204198' for key 'PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 07:41:56 --> [Caused by] mysqli_sql_exception: Duplicate entry 'e22204198' for key 'PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 07:44:56 --> ParseError: Unclosed '{' on line 6
+in APPPATH/Controllers/Compte.php on line 55.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(899): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 07:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-07 07:56:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-07 07:56:42 --> mysqli_sql_exception: Duplicate entry 'e22204198' for key 'PRIMARY' in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->creer()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-11-07 07:56:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'e22204198' for key 'PRIMARY'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 07:56:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'e22204198' for key 'PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 07:56:42 --> [Caused by] mysqli_sql_exception: Duplicate entry 'e22204198' for key 'PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 07:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-07 07:58:20 --> mysqli_sql_exception: Duplicate entry 'aargrgrefeerrr' for key 'PRIMARY' in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->creer()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-11-07 07:58:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'aargrgrefeerrr' for key 'PRIMARY'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 07:58:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'aargrgrefeerrr' for key 'PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 07:58:20 --> [Caused by] mysqli_sql_exception: Duplicate entry 'aargrgrefeerrr' for key 'PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 07:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-07 07:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-07 07:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-07 07:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-07 08:00:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'estle thjef')' at line 1 in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->creer()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-11-07 08:00:03 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'estle thjef')' at line 1
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:00:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'estle thjef')' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:00:03 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'estle thjef')' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 08:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-07 08:00:33 --> mysqli_sql_exception: Duplicate entry 'aargrgrefeerrr' for key 'PRIMARY' in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->creer()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-11-07 08:00:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'aargrgrefeerrr' for key 'PRIMARY'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:00:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'aargrgrefeerrr' for key 'PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:00:33 --> [Caused by] mysqli_sql_exception: Duplicate entry 'aargrgrefeerrr' for key 'PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Compte.php(41): App\Models\Db_model->set_compte()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 08:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-07 08:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-07 08:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-07 08:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-07 08:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-07 08:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-07 08:07:39 --> ErrorException: Undefined variable $model
+in APPPATH/Controllers/Compte.php on line 15.
+ 1 APPPATH/Controllers/Compte.php(15): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->lister()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 08:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-07 08:07:43 --> ErrorException: Undefined variable $model
+in APPPATH/Controllers/Compte.php on line 50.
+ 1 APPPATH/Controllers/Compte.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:08:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:08:09 --> ErrorException: Undefined variable $model
+in APPPATH/Controllers/Compte.php on line 50.
+ 1 APPPATH/Controllers/Compte.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:08:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 08:08:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 08:08:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:08:13 --> ErrorException: Undefined variable $model
+in APPPATH/Controllers/Compte.php on line 50.
+ 1 APPPATH/Controllers/Compte.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:08:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:08:45 --> ErrorException: Undefined variable $model
+in APPPATH/Controllers/Compte.php on line 50.
+ 1 APPPATH/Controllers/Compte.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:08:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 08:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 08:08:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:08:49 --> ErrorException: Undefined variable $model
+in APPPATH/Controllers/Compte.php on line 50.
+ 1 APPPATH/Controllers/Compte.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:08:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-07 08:08:59 --> mysqli_sql_exception: Duplicate entry 'e22204198' for key 'PRIMARY' in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Compte.php(50): App\Models\Db_model->set_compte()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Compte->creer()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-11-07 08:08:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'e22204198' for key 'PRIMARY'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Compte.php(50): App\Models\Db_model->set_compte()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:08:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'e22204198' for key 'PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Compte.php(50): App\Models\Db_model->set_compte()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:08:59 --> [Caused by] mysqli_sql_exception: Duplicate entry 'e22204198' for key 'PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Db_model.php(32): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Compte.php(50): App\Models\Db_model->set_compte()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Compte->creer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:36:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:43:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:43:17 --> ErrorException: Undefined variable $model
+in APPPATH/Controllers/Candidature.php on line 18.
+ 1 APPPATH/Controllers/Candidature.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:43:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-07 08:43:38 --> mysqli_sql_exception: Unknown column 'FJSIRNCATPJRUFHTRHEM' in 'where clause' in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(70): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Candidature.php(18): App\Models\Db_model->get_candidature()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-11-07 08:43:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'FJSIRNCATPJRUFHTRHEM' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/Db_model.php(70): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Candidature.php(18): App\Models\Db_model->get_candidature()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:43:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'FJSIRNCATPJRUFHTRHEM' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/Db_model.php(70): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Candidature.php(18): App\Models\Db_model->get_candidature()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:43:38 --> [Caused by] mysqli_sql_exception: Unknown column 'FJSIRNCATPJRUFHTRHEM' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Db_model.php(70): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Candidature.php(18): App\Models\Db_model->get_candidature()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:44:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-07 08:44:22 --> mysqli_sql_exception: Unknown column 'FJSIRNCATPJRUFHTRHEM' in 'where clause' in /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/MySQLi/Connection.php(306): mysqli->query()
+#1 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Models/Db_model.php(70): CodeIgniter\Database\BaseConnection->query()
+#4 /home/2024DIFAL3/e22204198/public_html/V1/ci/app/Controllers/Candidature.php(18): App\Models\Db_model->get_candidature()
+#5 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+#6 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 /home/2024DIFAL3/e22204198/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 /home/2024DIFAL3/e22204198/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-11-07 08:44:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'FJSIRNCATPJRUFHTRHEM' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 APPPATH/Models/Db_model.php(70): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Candidature.php(18): App\Models\Db_model->get_candidature()
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:44:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'FJSIRNCATPJRUFHTRHEM' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 APPPATH/Models/Db_model.php(70): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Candidature.php(18): App\Models\Db_model->get_candidature()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:44:22 --> [Caused by] mysqli_sql_exception: Unknown column 'FJSIRNCATPJRUFHTRHEM' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 APPPATH/Models/Db_model.php(70): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Candidature.php(18): App\Models\Db_model->get_candidature()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:47:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:47:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "affichage_candidature.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Candidature.php(20): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:47:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:47:19 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "affichage_candidature.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Candidature.php(20): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:47:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:47:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "affichage_candidature.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Candidature.php(20): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:47:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:47:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "affichage_candidature.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Candidature.php(20): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:48:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:48:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:48:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "affichage_candidature.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Candidature.php(20): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:48:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:49:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:54:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:54:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:59:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 08:59:54 --> ParseError: syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH/Views/candidature/affichage_candidature.php on line 15.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Candidature.php(20): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 08:59:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 09:00:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 09:00:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 09:00:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 09:00:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 11:20:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 11:23:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:23:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:24:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:24:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:24:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:24:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:24:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:24:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:24:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:24:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:24:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:24:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:24:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 11:24:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:25:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:25:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:25:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:25:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:26:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:26:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:26:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:26:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 11:26:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:27:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:27:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:27:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:27:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:27:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:27:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:27:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:28:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:28:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:28:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:29:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:29:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:31:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:31:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:31:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:32:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:32:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:35:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:35:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:35:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 11:35:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:35:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:35:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:36:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:36:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\Compte::$model is deprecated in APPPATH/Controllers/Compte.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Compte->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-07 11:36:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-07 11:40:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 11:41:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 11:43:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 11:43:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 11:43:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:17:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:18:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:18:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:18:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:18:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:18:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:18:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:23:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:24:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:24:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:24:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:26:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:26:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:30:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 17:30:56 --> ParseError: syntax error, unexpected token ")"
+in APPPATH/Views/candidature/affichage_candidature.php on line 35.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Candidature.php(20): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:31:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 17:31:10 --> ParseError: syntax error, unexpected token ")"
+in APPPATH/Views/candidature/affichage_candidature.php on line 35.
+ 1 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Candidature.php(20): view()
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:31:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 17:31:51 --> Error: Cannot use object of type stdClass as array
+in APPPATH/Views/candidature/affichage_candidature.php on line 35.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Candidature.php(20): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:32:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 17:32:20 --> Error: Cannot use object of type stdClass as array
+in APPPATH/Views/candidature/affichage_candidature.php on line 35.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Candidature.php(20): view()
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:37:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:38:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:41:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:41:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:43:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:43:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:43:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:43:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:44:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:44:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:44:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:44:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:45:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:45:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:46:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:46:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:47:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:50:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:51:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 17:51:16 --> ErrorException: foreach() argument must be of type array|object, string given
+in APPPATH/Views/candidature/affichage_candidature.php on line 43.
+ 1 APPPATH/Views/candidature/affichage_candidature.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2024DIFAL3/e22204198/public_html/V1/ci/app/Views/candidature/affichage_candidature.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Candidature.php(20): view()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:51:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-07 17:51:51 --> ErrorException: foreach() argument must be of type array|object, string given
+in APPPATH/Views/candidature/affichage_candidature.php on line 43.
+ 1 APPPATH/Views/candidature/affichage_candidature.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2024DIFAL3/e22204198/public_html/V1/ci/app/Views/candidature/affichage_candidature.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Candidature.php(20): view()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Candidature->afficher()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:51:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:53:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:53:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-11-07 17:57:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Candidature::$model is deprecated in APPPATH/Controllers/Candidature.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(913): App\Controllers\Candidature->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
